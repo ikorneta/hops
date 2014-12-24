@@ -1,0 +1,298 @@
+from	to
+Target	Admiral
+Challenger	Admiral
+Northdown	Admiral
+Amarillo	Ahtanum
+Cascade	Ahtanum
+Cascade	Amarillo
+Centennial	Amarillo
+Citra	Amarillo
+Magnum	Apollo
+Columbus	Apollo
+Summit	Apollo
+Cluster	Aquila
+Galena	Aquila
+Aquila	Banner
+Cluster	Banner
+Galena	Banner
+Pacific Gem	Belma
+Bullion	Bramling Cross
+Northern Brewer	Bramling Cross
+Galena	Bramling Cross
+East Kent Goldings	Bramling Cross
+Progress	Bramling Cross
+Brewers Gold	Bramling Cross
+Whitbread Golding Variety	Bramling Cross
+Columbus	Bravo
+Warrior	Bravo
+Bullion	Brewers Gold
+Galena	Brewers Gold
+Bramling Cross	Brewers Gold
+Northern Brewer	Brewers Gold
+Chinook	Brewers Gold
+Brewers Gold	Bullion
+Northern Brewer	Bullion
+Galena	Bullion
+Bramling Cross	Bullion
+Mount Rainier	Bullion
+Chinook	Bullion
+Eroica	Bullion
+Amarillo	Cascade
+Centennial	Cascade
+Ahtanum	Cascade
+Cascade	Centennial
+Citra	Centennial
+Amarillo	Centennial
+Galena	Centennial
+Eroica	Centennial
+Nugget	Centennial
+Bullion	Centennial
+Perle	Challenger
+Target	Challenger
+Phoenix	Challenger
+East Kent Goldings	Challenger
+Northern Brewer	Challenger
+Galena	Chinook
+Cluster	Chinook
+Nugget	Chinook
+Columbus	Chinook
+Northern Brewer	Chinook
+Eroica	Chinook
+Bullion	Chinook
+Galaxy	Citra
+Centennial	Citra
+Nelson Sauvin	Citra
+Simcoe	Citra
+Galena	Cluster
+Chinook	Cluster
+Northern Brewer	Cluster
+Eroica	Cluster
+Fuggles	Columbia
+Willamette	Columbia
+Centennial	Columbus
+Chinook	Columbus
+Galena	Columbus
+Nugget	Columbus
+Summit	Comet
+Galena	Comet
+Liberty	Crystal
+Hersbrucker	Crystal
+Mount Hood	Crystal
+Hallertau	Crystal
+Ultra	Crystal
+Chinook	Eroica
+Cluster	Eroica
+Galena	Eroica
+Nugget	Eroica
+Northern Brewer	Eroica
+Cascade	Falconers Flight
+Ahtanum	Falconers Flight
+Sorachi Ace	Falconers Flight
+Simcoe	Falconers Seven Seas
+East Kent Goldings	First Gold
+Fuggles	First Gold
+Crystal	First Gold
+Willamette	Fuggles
+East Kent Goldings	Fuggles
+Styrian Goldings	Fuggles
+Citra	Galaxy
+Amarillo	Galaxy
+Centennial	Galaxy
+Simcoe	Galaxy
+Nugget	Galena
+Cluster	Galena
+Chinook	Galena
+Legacy	Galena
+Brewers Gold	Galena
+Eroica	Galena
+Northern Brewer	Galena
+Willamette	Glacier
+Styrian Goldings	Glacier
+Palisade	Glacier
+Galena	Green Bullet
+Styrian Goldings	Green Bullet
+Mount Hood	Hallertau
+Liberty	Hallertau
+Crystal	Hallertau
+Hersbrucker	Hallertau
+Helga	Hallertau
+Hallertau	Helga
+Hersbrucker	Helga
+Pioneer	Herald
+Horizon	Herkules
+Magnum	Herkules
+Taurus	Herkules
+Hallertau	Hersbrucker
+Helga	Hersbrucker
+Mount Hood	Hersbrucker
+Liberty	Hersbrucker
+Magnum	Horizon
+Amarillo	Horizon
+Fuggles	East Kent Goldings
+First Gold	East Kent Goldings
+Willamette	East Kent Goldings
+Hallertau	Liberty
+Mount Hood	Liberty
+Crystal	Liberty
+Saaz	Lublin
+Tettnang	Lublin
+Horizon	Magnum
+Galena	Magnum
+Perle	Marynka
+Chinook	Marynka
+Citra	Meridian
+Amarillo	Meridian
+Sorachi Ace	Meridian
+Magnum	Merkur
+Horizon	Merkur
+Nugget	Millennium
+Columbus	Millennium
+Galaxy	Mosaic
+Nelson Sauvin	Mosaic
+Saaz	Motueka
+Hallertau	Mount Hood
+Liberty	Mount Hood
+Crystal	Mount Hood
+Tettnang	Mount Hood
+Hallertau	Mount Rainier
+Fuggles	Mount Rainier
+Magnum	Newport
+Galena	Newport
+Northern Brewer	Northdown
+Target	Northdown
+Galena	Northern Brewer
+Perle	Northern Brewer
+Northdown	Northern Brewer
+Aurora	Northern Brewer
+Chinook	Nugget
+Galena	Nugget
+Cluster	Nugget
+Columbus	Nugget
+Brewers Gold	Olympic
+Chinook	Olympic
+Galena	Olympic
+Saphir	Opal
+East Kent Goldings	Opal
+Hallertau	Orion
+Tettnang	Orion
+Spalt	Orion
+Saaz	Orion
+Perle	Orion
+Belma	Pacific Gem
+Bullion	Pacific Gem
+Magnum	Pacific Jade
+Willamette	Palisade
+Glacier	Palisade
+Northern Brewer	Perle
+Cluster	Perle
+Galena	Perle
+Northdown	Perle
+Chinook	Perle
+Challenger	Phoenix
+Northern Brewer	Phoenix
+East Kent Goldings	Phoenix
+Northdown	Phoenix
+Target	Pilgrim
+East Kent Goldings	Pioneer
+Yeoman	Pioneer
+Herald	Pioneer
+Omega	Pioneer
+Styrian Goldings	Premiant
+Saaz	Premiant
+Aurora	Premiant
+Centennial	Pride of Ringwood
+Galena	Pride of Ringwood
+Cluster	Pride of Ringwood
+Fuggles	Progress
+East Kent Goldings	Progress
+Cascade	Riwaka
+Tettnang	Saaz
+Sterling	Saaz
+Spalt	Saaz
+Lublin	Saaz
+Tettnang	Santiam
+Citra	Santiam
+Spalt	Santiam
+Hallertau	Saphir
+Galena	Satus
+Spalt	Select
+Tettnang	Select
+Saaz	Select
+Amarillo	Simcoe
+Cascade	Simcoe
+Centennial	Simcoe
+Saaz	Sladek
+Southern Cross	Sorachi Ace
+Sorachi Ace	Southern Cross
+Fuggles	Sovereign
+Saaz	Spalt
+Tettnang	Spalt
+Ultra	Spalt
+Saaz	Sterling
+Mount Hood	Sterling
+Lublin	Sterling
+Northern Brewer	Sticklebract
+Hersbrucker	Strisselspalt
+Hallertau	Strisselspalt
+Mount Hood	Strisselspalt
+Crystal	Strisselspalt
+Styrian Goldings	Aurora
+Premiant	Aurora
+Northern Brewer	Aurora
+Fuggles	Styrian Goldings
+Willamette	Styrian Goldings
+Aurora	Styrian Goldings
+Rakau	Summer
+Amarillo	Summer
+Apollo	Summit
+Simcoe	Summit
+Cluster	Super Pride
+Galena	Super Pride
+Galena	Super Galena
+Nugget	Super Galena
+Cluster	Super Galena
+Chinook	Super Galena
+East Kent Goldings	Target
+Admiral	Target
+Northdown	Target
+Horizon	Taurus
+Herkules	Taurus
+Magnum	Taurus
+Citra	Taurus
+Tradition	Taurus
+Saaz	Tettnang
+Spalt	Tettnang
+Ultra	Tettnang
+Rakau	Topaz
+Stella	Topaz
+Hallertau	Tradition
+Liberty	Tradition
+Magnum	Tradition
+Hersbrucker	Tradition
+Taurus	Tradition
+Perle	TriplePearl
+Saaz	Ultra
+Spalt	Ultra
+Tettnang	Ultra
+Hallertau	Ultra
+Crystal	Ultra
+Liberty	Ultra
+Mount Hood	Ultra
+Tradition	Ultra
+Hallertau	Vanguard
+Spalt	Vanguard
+Tettnang	Vanguard
+Bravo	Warrior
+Apollo	Warrior
+Magnum	Warrior
+East Kent Goldings	Whitbread Golding Variety
+Progress	Whitbread Golding Variety
+Fuggles	Willamette
+Styrian Goldings	Willamette
+East Kent Goldings	Willamette
+Tettnang	Willamette
+Perle	Yakima Gold
+Target	Yeoman
+Cascade	Zythos
+Ahtanum	Zythos
+Sorachi Ace	Zythos

@@ -1,0 +1,196 @@
+---
+output: html_document
+---
+####Hop Variety Network
+#####Coursera SNA Peer Assessment Project, Autumn 2014 Edition
+#####Iga Korneta
+
+######Introduction
+*Humulus lupulus* (common hop or hop) is a species of flowering plant in the Cannabaceae family, native to Europe, western Asia and North America. *H. lupulus* is the main ingredient of many beers, and as such is widely cultivated for use by the brewing industry ([Wikipedia](https://en.wikipedia.org/wiki/Humulus_lupulus)). 
+
+Different types of beers are brewed with different hops. By effect, there are two main hop types: **bittering** and **finishing** (aroma). The effect of a hop on the brew is determined by the composition of its resin, mainly by the content of the so-called alpha- and beta-acids. Bittering hops have higher concentrations of alpha acids, and are responsible for the large majority of the bitter flavor of a beer. Aroma hops usually have a lower concentration of alpha acids (~5%) and are the primary contributors of hop aroma and (nonbitter) flavor ([Wikipedia](https://en.wikipedia.org/wiki/Hops)). Altogether, there are at present at least ~140 hop varieties in use ([Wikipedia](https://en.wikipedia.org/wiki/List_of_hop_varieties) ).
+
+Professional brewers and homebrewers are, obviously, aware of the differences between hop varieties. I'm not one of them, though. I'm, in fact, a complete abnegate when it comes to beers. I've just only recently tasted beer with a very different taste to the beers I'm used to and got curious about it (it turned out to contain one of the rarer New Zealand hops, and I'm in Europe). So, for this project, I've decided to expand my own knowledge and explore the wonderful world of hops. I think I've learnt a lot, but the usefulness of this project for **you** will definitely depend on how much you know about beer and brewing already. :-)
+  
+  
+######Data Acquisition
+I created the dataset by combining information from several resources:  
+- https://en.wikipedia.org/wiki/List_of_hop_varieties  
+- http://www.beeradvocate.com/beer/101/hops/  
+- http://www.brewerylane.com/hops_profiles.html  
+- https://freshops.com/hops/variety_descriptions  
+- http://www.bear-flavored.com/2011/12/bear-flavoreds-ultimate-guide-to-hop.html  
+- http://www.homebrewstuff.com/hop-profiles  
+- http://beersmith.com/hop-list/  
+
+For each hop variety, I tried to obtain the following information:  
+- Name  
+- Type (bittering, finishing or dual-purpose)  
+- Country of origin  
+- Alpha-acid content  
+- Beta-acid content  
+- Types of beer where hop is used  
+- Possible substitutes.  
+
+Not all data was available for each variety. Also, in particular, reported alpha-acid content sometimes differed between sources - a content of 9-12% reported by one source could be reported as 10-15% in another. Hence, alpha-acid data should be treated in an approximate and relative way (i.e. a hop with reported alpha 9-12% is almost certain to have higher alpha than a hop with reported alpha 3-3.5%; on the other hand, it's inconclusive whether it really has a lower alpha than a 10-15% hop).
+
+I created the network based on the variety-substitution data. I.e.:  
+- each hop variety corresponded to a single node (vertex);     
+- in-edges were created from varieties mentioned by at least one expert/source as possible variety substitute.
+
+For example:  
+Hallertau can be substituted *by* Saaz, Hersbrucker or Tettnang
+
+so the following edges were created:  
+Saaz --> Hallertau (Saaz can substitute *for* Hallertau)  
+Hersbrucker --> Hallertau  
+Tettnang --> Hallertau  
+
+
+######Initial Data Exploration and Visualisation
+I chose R with the igraph package as my analysis tool. 
+
+```{r load, eval=TRUE, echo=TRUE}
+library(igraph)
+library(ggplot2)
+library(gridExtra)
+hops_vert <- read.delim("./hops_vert.txt")
+hops_edg <- read.delim("./hops_edg.txt")
+hopg <- graph.data.frame(hops_edg, vertices=hops_vert, directed=TRUE)
+```
+
+The following visualisation shows the network with vertices coloured by country of hop origin (black: continental Europe [Germany, France, Czech Republic, Slovenia, Poland, Russia], blue: UK, red: US, orange: Australia and New Zealand, purple: Japan).
+```{r plot2, eval=TRUE, echo=TRUE, fig.height=8, fig.align='center'}
+hopcountmap <- c("orange", "black", "black", "black", "purple", "orange", "black", "black", "black", "blue", "red")
+plot.igraph(hopg, layout=layout.fruchterman.reingold(graph=hopg, area=200^2), vertex.size=4, vertex.color=hopcountmap[hops_vert$Country], vertex.label.cex=0.7, vertex.label.family='mono', vertex.label.dist=0.25, vertex.label.color="dark green", edge.width=0.5, edge.arrow.size=0.5, edge.arrow.width=0.3)
+```
+
+The following visualisation shows the network with vertices coloured by the type of hop (brown: bittering, yellow: finishing, black: dual-purpose, grey: unknown).
+```{r plot1, eval=TRUE, echo=TRUE, fig.height=8, fig.align='center'}
+hoptypemap <- c("brown", "black", "yellow", "grey")
+plot.igraph(hopg, layout=layout.fruchterman.reingold(graph=hopg, area=200^2), vertex.size=4, vertex.color=hoptypemap[hops_vert$Type], vertex.label.cex=0.7, vertex.label.family='mono', vertex.label.dist=0.25, vertex.label.color="dark green", edge.width=0.5, edge.arrow.size=0.5, edge.arrow.width=0.3)
+```
+
+The following visualisation shows the network with vertices coloured by averaged alpha-acid content (yellow: <=6%, orange: <=14%, red: >14%, up to 21%).
+```{r plot3, eval=TRUE, echo=TRUE, fig.height=8, fig.align='center'}
+hops_vert$avalpha <- (hops_vert$Alpha_min+hops_vert$Alpha_max)/2
+hops_vert$Alphatype <- as.factor(ifelse(hops_vert$avalpha<=6, "1", ifelse(hops_vert$avalpha<=14, "2", "3")))
+hopalphamap <- c("yellow", "orange", "red")
+plot.igraph(hopg, layout=layout.fruchterman.reingold(graph=hopg, area=200^2), vertex.size=4, vertex.color=hopalphamap[hops_vert$Alphatype], vertex.label.cex=0.7, vertex.label.family='mono', vertex.label.dist=0.25, vertex.label.color="dark green", edge.width=0.5, edge.arrow.size=0.5, edge.arrow.width=0.3)
+```
+
+These visualisations already tell some history of hop variety differentiation. For example, traditional UK hops group together. German noble hops also group together (those are the ones like Hallertau or Saaz). German high-alpha hops also group together. And a lot of the ungrouped varieties are high-alpha (which means they are new) or from Eastern Europe (which means that the American brewers would have a more limited access to them).
+
+
+Nevertheless, since this is an SNA Peer Assessment project, and it requires me to treat the network quantitatively - let's start, seriously, from the quantitative metrics. From this point on, I'll treat the graph as undirected:
+
+######Quantitative Network Analysis
+**1. Network summary.**
+```{r sum, eval=TRUE, echo=TRUE}
+summary(as.undirected(hopg))
+```
+Named undirected graph with 141 vertices and 235 edges. If I still treated it as directed, there would be 297 edges - some would be counted twice for each direction.
+
+**2. Degree distribution.**
+```{r deg1, eval=TRUE, echo=TRUE, fig.height=4}
+x <- seq(0,23)
+y <- 141*degree.distribution(as.undirected(hopg))
+d <- as.data.frame(cbind(x, y))
+p <- ggplot(d, aes(x,y))+geom_point(color="orange", size=3) + theme_bw()+xlab("Degree") + ylab ("Number of nodes")
+q <- ggplot(d, aes(log(x+1),log(y+1)))+geom_point(color="orange", size=3) + theme_bw()+xlab("log(Degree+1)") + ylab ("log(Number of nodes+1)")
+grid.arrange(p,q, nrow=2)
+```
+
+The network is too small to make sound conclusions about the mode of attachment (preferential or not).
+
+**3. Nodes with maximum degrees.**
+```{r deg2, eval=TRUE, echo=TRUE}
+hop_deg <- degree(as.undirected(hopg))
+ord_hop_deg <- order(hop_deg)
+tail(hop_deg[ord_hop_deg])
+tail(hops_vert[ord_hop_deg, c(1,2,3,4,6)])
+```
+These appear to be either old hop varieties, or varieties bred for "generic", "mainstream" purposes. It seems sensible that there would be many substitutes for them.
+
+**4. Nodes with high betweenness.**
+```{r bet, eval=TRUE, echo=TRUE}
+hop_bet <- betweenness(as.undirected(hopg), normalized=TRUE)
+ord_hop_bet <- order(hop_bet)
+tail(hop_bet[ord_hop_bet])
+tail(hops_vert[ord_hop_bet, c(1,2,3,4,6)])
+```
+On the other hand, apart from East Kent Goldings, these nodes aren't old/traditional. Instead, going by the definition of betweenness, those are varieties that are simply frequently used with connection with others, rarer varieties.
+
+**5. Community detection.**
+```{r com1, eval=TRUE, echo=TRUE}
+fc <-  fastgreedy.community(as.undirected(hopg))
+sizes(fc)
+```
+This is the meat of the network description problem. The FastGreedy algorithm detects 6 communities with size >1. The modularity (listed below) is similar to that given by e.g. the Walktrap algorithm, so I think this is the best one can do.
+
+Here are the communities:
+```{r com2, eval=TRUE, echo=TRUE}
+modularity(fastgreedy.community(as.undirected(hopg)))
+```
+
+Community 1 appears to be composed primarily of mainstream dual-purpose and bittering hops, mainly from the UK and the US (e.g. Perle, Chinook, Cluster, Galena). Think American lager... but really, these are the "basis" of hops.
+
+```{r com3, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==1, c(1,2,3,4,6)]
+```
+
+Community 2 are "fun", "interesting", fruity hops (Galaxy, Simcoe, Mosaic, Sorachi Ace). Think American Pale Ales.
+
+```{r com4, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==2, c(1,2,3,4,6)]
+```
+
+Community 3 are primarily traditional British aroma/finishing hops and US hops bred to substitute for them (East Kent Goldings, Bramling Cross). Think traditional British ales, porters, stouts...
+```{r com5, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==3, c(1,2,3,4,6)]
+```
+
+Community 4 are again primarily traditional British hops, but this time bittering hops (Admiral, Challenger, Yeoman, Pioneer). Again, think British ales.
+```{r com6, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==4, c(1,2,3,4,6)]
+```
+
+Community 5 are the mainly the traditional low-alpha continental noble aroma hops and hops bred as substitutes (Saaz, Spalt, Tettnang). Think classic German lagers, Wheats or Altbiers (old beers). Saaz is the sole variety used for the Czech Pilsner Urquell.
+```{r com7, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==5, c(1,2,3,4,6)]
+```
+
+And Community 6 are again bittering hops, but this time including the new German bittering high-alpha hops (Magnum, Warrior, Taurus).
+```{r com8, eval=TRUE, echo=TRUE}
+hops_vert[membership(fc)==6, c(1,2,3,4,6)]
+```
+
+Here is the visualisation of the community division:
+```{r com_iga, eval=TRUE, echo=TRUE, fig.height=8, fig.align='center'}
+plot.igraph(hopg, layout=layout.fruchterman.reingold(graph=hopg, area=200^2), vertex.size=4, vertex.color=hopalphamap[hops_vert$Alphatype], vertex.label.cex=0.7, vertex.label.family='mono', vertex.label.dist=0.25, vertex.label.color="dark green", edge.width=0.5, edge.arrow.size=0.5, edge.arrow.width=0.3, mark.groups=list(V(hopg)[membership(fc)==1], V(hopg)[membership(fc)==2], V(hopg)[membership(fc)==3], V(hopg)[membership(fc)==4], V(hopg)[membership(fc)==5], V(hopg)[membership(fc)==6]))
+```
+
+**Bonus: Assortativity**  
+The assortativity coefficient is positive if similar vertices (based on some external property) tend to connect to each, and negative otherwise. Assortativity was only used in the course in quizzes, so I hope its inclusion here will satisfy the point "was at least one additional technique, not covered in the course materials, applied to the data?". If not... welp.
+
+I think it might be fun to calculate the assortativity with respect to the three attributes I used in the initial visualisation: country of hop origin, type of hop and averaged alpha-acid content.
+
+So:
+```{r assort, eval=TRUE, echo=TRUE}
+hops_vert$cgroup <- ifelse(hops_vert$Country %in% c("Germany", "France", "Poland", "Czech Rep", "Slovenia", "Russia"), "cont", ifelse(hops_vert$Country %in% c("Australia", "New Zealand"), "AusNZ", as.character(hops_vert$Country)))
+hops_vert$cgroup <- as.factor(hops_vert$cgroup)
+assortativity(as.undirected(hopg), hops_vert$cgroup)
+assortativity(as.undirected(hopg), hops_vert$Type)
+assortativity(as.undirected(hopg), hops_vert$Alphatype)
+```
+Apparently, the feature that guarantees the highest assortativity is the alpha-acid content. This makes sense - it's the alpha-acid content that determines the role of the hop in the beer. (For all that matters, I ignored the beta-acid content throughout this work because it's less variable - and less important - than the alpha-acid content.)
+
+
+######Limitations of the Data and Future Direction
+The data I used, as mentioned in the Data Acquisition part, was far from perfect. Incomplete, combined from several subjective sources, with alpha-acid content data that was reported differently between sources. It also didn't yield a lot of novel insight. That's all right, as far as I'm concerned. It wasn't supposed to. It was supposed to help me organise information I was not acquainted with. Though I think it might be entertaining to ask a professional brewer their opinion on whether it would be possible to substitute hops from the same communities that are not listed as direct substitutes. :-)
+
+More importantly, the data did not take into consideration *verbal* descriptions of hop varieties. These are important for the finishing/aroma hops. For example, the Nelson Sauvin variety is described in the Bear Flavored blog as "White wine, grapefruit, tangy berries. Dank and intensely fruity. Extremely unique" while Galaxy is "Tropical passionfruit, citrus hints of peach, mango." Similarity between aroma hops should include similarity between the descriptions of their aromas, and, I think, it might be interesting to look into that.
+
+
+######Final Words
+Well, that was fun! I hope that you are not a teetotaller, a Muslim, or a beer brewer, and so you also got something from this project. If you'd like to know more about beers and how to pair them with food, [this](http://www.splendidtable.org/story/the-7-flavor-categories-of-beer-what-they-are-how-to-pair-them) is a great link. Hops are only part of the picture, after all - there are also different malts. *Salut!*

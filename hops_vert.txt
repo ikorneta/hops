@@ -1,0 +1,142 @@
+Name	Country	Alpha	Beta	Beer	Type	Sub	Alpha_min	Alpha_max	Beta_min	Beta_max
+Admiral	UK	13.5-16	5.6	"British IPA, British Ale"	Bittering	"Target, Challenger, Northdown"	13.5	16	5.6	5.6
+Agnus	Czech Rep	9-12			Unknown		9	12		
+Ahtanum	US	5.7-6.3	5.0-6.5	American Ale	Finishing	"Amarillo, Cascade"	5.7	6.3	5	6.5
+Amarillo	US	8-11	6-7	"Pale Ale, IPA, Porter"	Bittering	"Cascade, Centennial, Citra"	8	11	6	7
+Apollo	US	20-21	5.5 -8		Bittering	"Magnum, Columbus, Summit"	20	21	5.5 	8
+Aquila	US	6-7.5	3	American Ale	Finishing	"Cluster, Galena "	6	7.5	3	3
+Aramis	US	8			Unknown		8	8		
+Azacca	US	14-16	5.4		Unknown		14	16	5.4	5.4
+Banner	US	9-11	4	American Lager	Dual purpose	"Aquila, Cluster, Galena"	9	11	4	4
+Belma	US	12		IPA	Unknown	Pacific Gem	12	12		
+Bohemie	Czech Rep	5-8			Unknown		5	8		
+Bor	Czech Rep	6-9			Unknown		6	9		
+Bramling Cross	UK	5.0-10.0	3	"ESB, Bitter, Pale Ale"	Dual purpose	"Bullion, Northern Brewer, Galena, East Kent Goldings, Progress, Brewers Gold, Whitbred"	5	10	3	3
+Bravo	US	14-17		"American IPA, American Pale Ale, American Stout"	Bittering	"Columbus, Tomahawk, Zeus, Warrior"	14	17		
+Brewers Gold	UK	6-9	3.7	"Stout, British Ale, heavy German Lager"	Bittering	"Bullion, Galena, Bramling Cross, Northern Brewer, Chinook"	6	9	3.7	3.7
+Bullion	UK	6.5-9	3.2-4.7	"Stout, British Ale, heavy German Lager"	Bittering	"Brewers Gold, Northern Brewer, Galena, Bramling Cross, Mount Rainier, Chinook, Eroica"	6.5	9	3.2	4.7
+Calypso	US	10-14		"Ales, Stouts, Barley Wines"	Dual purpose		10	14		
+Cascade	US	7.7-9.1	5.0-7.0	"Pale Ale, IPA, Porter, American Ale, American Lager"	Finishing	"Amarillo, Centennial, Ahtanum"	7.7	9.1	5	7
+Cashmere	US	4.5-7.0	4.8-7		Unknown		4.5	7	4.8	7
+Centennial	US	9.5-11.5	4.0-5.0	"American Ale, IPA, Dark Ale, Wheat"	Bittering	"Cascade, Citra, Amarillo, Galena, Eroica, Nugget, Bullion"	9.5	11.5	4	5
+Challenger	UK	6.5-8.5	4-4.5	"British Ale, British Lager"	Dual purpose	"Perle, Target, Phoenix, East Kent Goldings, Northern Brewer"	6.5	8.5	4	4.5
+Chinook	US	12-14	3.0-4.0	"American Ale, American Lager, American Pale Ale, Porter, Stout"	Bittering	"Galena, Cluster, Nugget, Columbus, Northern Brewer, Eroica, Bullion"	12	14	3	4
+Citra	US	11-13	3.5 -4.5	"Pale Ale, IPA"	Finishing	"Galaxy, Centennial, Nelson Sauvin, Simcoe"	11	13	3.5 	4.5
+Cluster	US	5.5-8.5	4.5-5.5	American Lager	Dual purpose	"Galena, Chinook, Northern Brewer, Eroica"	5.5	8.5	4.5	5.5
+Columbia	US	5.5	3	"Amber, Ale, Pale Ale, Porter, Stout"	Bittering	"Fuggles, Willamette"	5.5	5.5	3	3
+Columbus	US	14-18	4.5-5.5	"American IPA, American Pale Ale, Stout, Lager"	Bittering	"Centennial, Chinook, Galena, Nugget"	14	18	4.5	5.5
+Comet	US	9-11	4.5	"Ale, Lager"	Bittering	"Summit, Galena"	9	11	4.5	4.5
+Crystal	US	3.5-5.5	5.0-6.7	"German Pilsner, Lager, Koelsch, ESB, Belgian Ale"	Finishing	"Liberty, Hersbrucker, Mount Hood, Hallertau, Ultra"	3.5	5.5	5	6.7
+Dana	Slovenia	11-16	4.8-6		Unknown		11	16	4.8	6
+Delta	US	5.5-7	5.5-7	"American Pale Ale, American IPA"	Dual purpose		5.5	7	5.5	7
+El Dorado	US	14-16			Unknown		14	16		
+Equinox	US	14.4-15.6	4.6-5.1		Unknown		14.4	15.6	4.6	5.1
+Eroica	US	9-12	4-5.5	"Pale Ale, Dark Ales, Stout, Porter"	Dual purpose	"Chinook, Cluster, Galena, Nugget, Northern Brewer"	9	12	4	5.5
+Falconers Flight	US	10.5			Unknown	"Cascade, Ahtanum, Sorachi Ace"	10.5	10.5		
+Falconers Seven Seas	US	9-10			Unknown	Simcoe 	9	10		
+Feux-Coeur Francais	Australia	3.1-5.5			Unknown		3.1	5.5		
+First Gold	UK	6.5-8.5	3.5	"British Ale, Porter, ESB, IPA"	Dual purpose	"East Kent Goldings, Fuggles, Crystal"	6.5	8.5	3.5	3.5
+Fuggles	UK	4-5.5	1.5-2.0	"British Ale, ESB, Stout, Porter, American Ale, Pale Ale"	Finishing	"Willamette, East Kent Goldings, Styrian Goldings"	4	5.5	1.5	2
+Galaxy	Australia	13-15	5.8- 6	"Pale Ale, IPA"	Dual purpose	"Citra, Amarillo, Centennial, Simcoe"	13	15	5.8	 6
+Galena	US	12-14	7.5-9.0	"American Ale, American Lager, Stout"	Bittering	"Nugget, Cluster, Chinook, Legacy, Brewers Gold, Eroica, Northern Brewer"	12	14	7.5	9
+Glacier	US	5.5	7.6	"American Ale, ESB"	Finishing	"Willamette, Styrian Goldings, Palisade"	5.5	5.5	7.6	7.6
+Green Bullet	New Zealand	11-14	7.0	"Australian Lager, Australian Ale, Stout, Bitter"	Bittering	"Galena, Styrian Goldings"	11	14	7	7
+Greenburg	US	5.2			Unknown		5.2	5.2		
+Hallertau	Germany	3.5-5.5	3.5-5.5	"Pilsner, Bock, German Lager, American Lager, Wheat, Belgian Ale, Altbier"	Finishing	"Mount Hood, Liberty, Crystal, Hersbrucker, Helga"	3.5	5.5	3.5	5.5
+Harmonie	Czech Rep	5-8			Unknown		5	8		
+Helga	Australia	5-6.3	4.6		Unknown	"Hallertau, Hersbrucker "	5	6.3	4.6	4.6
+Herald	UK	11-13	5.2	British Ale	Bittering	Pioneer	11	13	5.2	5.2
+Herkules	Germany	12.0-17.0			Unknown	"Horizon, Magnum, Taurus"	12	17		
+Hersbrucker	Germany	3-5.5	4 -6	"German Ale, German Lager, Wheat"	Finishing	"Hallertau, Helga, Mount Hood, Liberty"	3	5.5	4 	6
+Horizon	US	11-13	6.5-8.5	"American Ale, American Lager"	Bittering	"Magnum, Amarillo"	11	13	6.5	8.5
+Huell Melon	Germany	6.9-7.5		"Bitter, German Ale, German Lager"	Dual purpose		6.9	7.5		
+Kazbek	Czech Rep	5-8			Unknown		5	8		
+Kohatu	New Zealand	6-7	5.8-3.5		Unknown		6	7	5.8	3.5
+East Kent Goldings	UK	4-5.5	2.0-3.0	"British Ale, ESB, Bitter, Belgian Ale, Pale Ale, Porter, Stout"	Finishing	"Fuggles, First Gold, Willamette"	4	5.5	2	3
+Legacy	US	7-8			Unknown		7	8		
+Liberty	US	3-5	3.0-3.5	"American Lager, American Ale, German Lager, Pilsner, Bock, Koelsch"	Finishing	"Hallertau, Mount Hood, Crystal"	3	5	3	3.5
+Lublin	Poland	3-5	3.0	"Pilsner, German Lager"	Finishing	"Saaz, Tettnang"	3	5	3	3
+Magnum	Germany	11-17	5.0-7.0	"Pale Ale, IPA, German Lager, German Ale"	Bittering	"Horizon, Galena"	11	17	5	7
+Mandarina Bavaria	Germany	7-10			Unknown		7	10		
+Marynka	Poland	7-10			Unknown	"Perle, Chinook"	7	10		
+Meridian	US	6-7			Unknown	"Citra, Amarillo, Sorachi Ace"	6	7		
+Merkur	Germany	12-15			Unknown	"Magnum, Horizon"	12	15		
+Millennium	US	13-16	4.8	American Ale	Bittering	"Nugget, Columbus"	13	16	4.8	4.8
+Mosaic	US	11.5-13.5	3.2-3.9	"Brown Ale, IPA, Pale Ale"	Unknown	"Galaxy, Nelson Sauvin"	11.5	13.5	3.2	3.9
+Motueka	New Zealand	6.5-7.5		"Pilsner, Belgian Ale, Bitter"	Dual purpose	Saaz	6.5	7.5		
+Mount Hood	US	5-8	5.0-7.5	"American Lager, American Ale, German Lager, Pilsner, Bock, Wheat"	Finishing	"Hallertau, Liberty, Crystal, Tettnang"	5	8	5	7.5
+Mount Rainier	US	5-8			Unknown	"Hallertau, Fuggles"	5	8		
+Nelson Sauvin	New Zealand	12-14	6-8	"Ale, Lager"	Bittering		12	14	6	8
+Newport	US	10-17			Bittering	"Magnum, Galena"	10	17		
+Northdown	UK	7.5-9.5	5.5	"Porter, British Ale"	Dual purpose	"Northern Brewer, Target"	7.5	9.5	5.5	5.5
+Northern Brewer	UK	8-10	3.0-5.0	"British Ale, ESB, Bitter, Porter, German Lager"	Dual purpose	"Galena, Perle, Northdown, Aurora"	8	10	3	5
+Nugget	US	12-14	4.0-6.0	"Ale, Stout"	Dual purpose	"Chinook, Galena, Cluster, Columbus"	12	14	4	6
+Olympic	US	11-13		"Stout, Dark Ale"	Bittering	"Brewers Gold, Chinook, Galena"	11	13		
+Omega	US	9-11		"Ale, Stout, Lager"	Bittering		9	11		
+Opal	Germany	8-10			Unknown	"Saphir, East Kent Goldings"	8	10		
+Orion	Germany	6-8	3.7	"German Ale, German Lager"	Finishing	"Hallertau, Tettnang, Spalt, Saaz, Perle"	6	8	3.7	3.7
+Pacific Gem	New Zealand	14-16	8.2	"Pale Ale, IPA"	Bittering	"Belma, Bullion"	14	16	8.2	8.2
+Pacific Jade	New Zealand	12-14		Dry Lager	Dual purpose	Magnum	12	14		
+Pacifica	New Zealand	5.0-6.0			Finishing		5	6		
+Palisade	US	6-10		British Ale	Finishing	"Willamette, Glacier"	6	10		
+Perle	Germany	6-10	4.0-5.0	"Pale Ale, Lager, Stout, Wheat"	Dual purpose	"Northern Brewer, Cluster, Galena, Northdown, Chinook"	6	10	4	5
+Phoenix	UK	9-13	4.6	"British Ale, Porter, ESB, Stout, Bitter"	Bittering	"Challenger, Northern Brewer, East Kent Goldings, Northdown"	9	13	4.6	4.6
+Pilgrim	UK	9-13			Unknown	Target	9	13		
+Pilot	UK	9-12			Unknown		9	12		
+Pioneer	UK	8-10	3.8	"British Ale, ESB, Bitter"	Dual purpose	"East Kent Goldings, Yeoman, Herald, Omega "	8	10	3.8	3.8
+Polaris	Germany	19-23			Unknown		19	23		
+Premiant	Czech Rep	7-10			Unknown	"Styrian Goldings, Saaz, Aurora"	7	10		
+Pride of Ringwood	Australia	7-10	5.3-6.5	"British Ale, Australian Ale, Australian Lager"	Dual purpose	"Centennial, Galena, Cluster"	7	10	5.3	6.5
+Progress	UK	5-7	2.1	British Ale	Dual purpose	"Fuggles, East Kent Goldings"	5	7	2.1	2.1
+Rakau	New Zealand	 9-11	4.6		Unknown		 9	11	4.6	4.6
+Riwaka	New Zealand	4.5-6.5		Pale Ale	Finishing	Cascade	4.5	6.5		
+Rubin	Czech Rep	9-12			Unknown		9	12		
+Saaz	Czech Rep	3-4.5	3-4.5	"Pilsner, German Lager, Wheat, Belgian Ale"	Finishing	"Tettnang, Sterling, Spalt, Lublin"	3	4.5	3	4.5
+San Juan Ruby Red	US	7.01			Unknown		7.01	7.01		
+Santiam	US	5-7	7	"American Lagers, German Lagers, German Ales, Wheat, Pilsner"	Finishing	"Tettnang, Citra, Spalt"	5	7	7	7
+Saphir	Germany	2-4.5		"Pilsner, German Lager, Belgian White"	Finishing	Hallertau	2	4.5		
+Satus	US	12.5-14	8.5-9.0		Unknown	Galena	12.5	14	8.5	9
+Select	Germany	4-6			Unknown	"Spalt, Tettnang, Saaz"	4	6		
+Serebrianka	Russia	3.5			Unknown		3.5	3.5		
+Simcoe	US	12-14	4.0-5.0	"American Ale, IPA, Double IPA"	Bittering	"Amarillo, Cascade, Centennial"	12	14	4	5
+Sladek	Czech Rep	4.5-8		Lager	Finishing	Saaz	4.5	8		
+Smaragd	Germany	3.5-5.5			Unknown		3.5	5.5		
+Sonnet Golding	US	6.6			Unknown		6.6	6.6		
+Sorachi Ace	Japan	10.0-16.0		"American Ale, Pale Ale, Wheat"	Bittering	Southern Cross	10	16		
+Southern Cross	New Zealand	11.0-14.0	6.2	Australian Lager	Bittering	Sorachi Ace	11	14	6.2	6.2
+Sovereign	UK	4-7			Unknown	Fuggles	4	7		
+Spalt	Germany	4-5	3.0-4.5	"German Lager, Altbier"	Finishing	"Saaz, Tettnang, Ultra"	4	5	3	4.5
+Stella	Australia	14-16	4-4.5		Unknown		14	16	4	4.5
+Sterling	US	6-9	5.0-6.0	"Ale, Pilsner, Lager"	Bittering	"Saaz, Mount Hood, Lublin"	6	9	5	6
+Sticklebract	New Zealand	11-14	8	Ale	Bittering	Northern Brewer	11	14	8	8
+Strisselspalt	France	3-5	3.8	"Pilsner, Lager, Wheat"	Finishing	"Hersbrucker, Hallertau, Mount Hood, Crystal"	3	5	3.8	3.8
+Aurora	Slovenia	7.0-9.5			Unknown	"Styrian Golding, Premiant, Northern Brewer"	7	9.5		
+Styrian Bobek	Slovenia	3.5-7.0			Unknown		3.5	7		
+Styrian Celeia	Slovenia	3.0-6.0			Unknown		3	6		
+Styrian Goldings	Slovenia	4.5-6	2-3	"British Ale, Vienna Lager, Belgian Ale, Pilsner"	Finishing	"Fuggles, Willamette, Aurora"	4.5	6	2	3
+Summer	Australia	4 -7	4.8-6.1		Unknown	"Rakau, Amarillo"	4 	7	4.8	6.1
+Summit	US	17-19		Pale Ale	Unknown	"Apollo, Simcoe"	17	19		
+Super Pride	Australia	9-10.5	5.5-6		Unknown	"Cluster, Galena"	9	10.5	5.5	6
+Sun	US	12-16	5.5		Bittering		12	16	5.5	5.5
+Super Alpha	New Zealand	10-12	8		Dual purpose		10	12	8	8
+Super Galena	US	13-16		"American Ale, Stout, American Lager"	Bittering	"Galena, Nugget, Cluster, Chinook"	13	16		
+Tahoma	US	7.2-8.2	8.5-9.5		Unknown		7.2	8.2	8.5	9.5
+Tardif de Bourgogne	France	3.1-5.5			Unknown		3.1	5.5		
+Target	UK	9.5-12.5	5-5.5	"British Ale, British Lager"	Dual purpose	"East Kent Goldings, Admiral, Northdown"	9.5	12.5	5	5.5
+Taurus	Germany	12-17			Bittering	"Horizon, Herkules, Magnum, Citra, Tradition"	12	17		
+Tettnang	Germany	3.5-5.5	3.5-4.5	"Wheat, Lager"	Finishing	"Saaz, Spalt, Ultra"	3.5	5.5	3.5	4.5
+Topaz	Australia	15.5-18	6-7		Unknown	"Rakau, Stella"	15.5	18	6	7
+Tradition	Germany	10-13	4.5	"German Lager, Pilsner, Bock, Wheat"	Bittering	"Hallertau, Liberty, Magnum, Hersbrucker, Taurus"	10	13	4.5	4.5
+TriplePearl	US	10.2-11.2	3.3-4.2		Unknown	Pearl	10.2	11.2	3.3	4.2
+Ultra	US	4.5-5	3.6-4.7	"German Lager, Pilsner, Wheat"	Finishing	"Saaz, Spalt, Tettnang, Hallertau, Crystal, Liberty, Mount Hood, Tradition"	4.5	5	3.6	4.7
+Vanguard	US	5.5-6	5.0-7.0	"German Lager, Pilsner, Wheat, Koelsch"	Finishing	"Hallertau, Spalt, Tettnang"	5.5	6	5	7
+Vital	Czech Rep	12-16			Unknown		12	16		
+Waimea	New Zealand	16-19			Unknown		16	19		
+Wakatu	New Zealand	7 -9	5.8-8.5		Unknown		7 	9	5.8	8.5
+Warrior	US	15-17	4.5-5.5	"IPA, Double IPA"	Bittering	"Bravo, Apollo, Magnum"	15	17	4.5	5.5
+Whitbread Golding Variety	UK	5.0-8.0	2.5	British Ale	Finishing	"East Kent Goldings, Progress"	5	8	2.5	2.5
+Willamette	US	4-6	3.5-4.5	"American Pale Ale, Brown Ale, British Ale"	Finishing	"Fuggles, Styrian Goldings, East Kent Goldings, Tettnang"	4	6	3.5	4.5
+Yakima Gold	US	8.8-10.5	4.3-5.0		Unknown	Pearl	8.8	10.5	4.3	5
+Yeoman	UK	9-14		"British Ale, British Lager"	Bittering	Target	9	14		
+Zythos	US	10-12			Unknown	"Cascade, Ahtanum, Sorachi Ace"	10	12		
+Zenith	UK	9-10		"British Ale, British Lager"	Unknown		9	10		
