@@ -68,14 +68,15 @@ img {
 </div>
 <div id="iga-korneta" class="section level5">
 <h5>Iga Korneta</h5>
-<div id="introduction" class="section level6">
-<h6>Introduction</h6>
+</div>
+<div id="introduction" class="section level5">
+<h5><strong>Introduction</strong></h5>
 <p><em>Humulus lupulus</em> (common hop or hop) is a species of flowering plant in the Cannabaceae family, native to Europe, western Asia and North America. <em>H. lupulus</em> is the main ingredient of many beers, and as such is widely cultivated for use by the brewing industry (<a href="https://en.wikipedia.org/wiki/Humulus_lupulus">Wikipedia</a>).</p>
 <p>Different types of beers are brewed with different hops. By effect, there are two main hop types: <strong>bittering</strong> and <strong>finishing</strong> (aroma). The effect of a hop on the brew is determined by the composition of its resin, mainly by the content of the so-called alpha- and beta-acids. Bittering hops have higher concentrations of alpha acids, and are responsible for the large majority of the bitter flavor of a beer. Aroma hops usually have a lower concentration of alpha acids (~5%) and are the primary contributors of hop aroma and (nonbitter) flavor (<a href="https://en.wikipedia.org/wiki/Hops">Wikipedia</a>). Altogether, there are at present at least ~140 hop varieties in use (<a href="https://en.wikipedia.org/wiki/List_of_hop_varieties">Wikipedia</a> ).</p>
 <p>Professional brewers and homebrewers are, obviously, aware of the differences between hop varieties. I’m not one of them, though. I’m, in fact, a complete abnegate when it comes to beers. I’ve just only recently tasted beer with a very different taste to the beers I’m used to and got curious about it (it turned out to contain one of the rarer New Zealand hops, and I’m in Europe). So, for this project, I’ve decided to expand my own knowledge and explore the wonderful world of hops. I think I’ve learnt a lot, but the usefulness of this project for <strong>you</strong> will definitely depend on how much you know about beer and brewing already. :-)</p>
 </div>
-<div id="data-acquisition" class="section level6">
-<h6>Data Acquisition</h6>
+<div id="data-acquisition" class="section level5">
+<h5><strong>Data Acquisition</strong></h5>
 <p>I created the dataset by combining information from several resources:<br />- <a href="https://en.wikipedia.org/wiki/List_of_hop_varieties" class="uri">https://en.wikipedia.org/wiki/List_of_hop_varieties</a><br />- <a href="http://www.beeradvocate.com/beer/101/hops/" class="uri">http://www.beeradvocate.com/beer/101/hops/</a><br />- <a href="http://www.brewerylane.com/hops_profiles.html" class="uri">http://www.brewerylane.com/hops_profiles.html</a><br />- <a href="https://freshops.com/hops/variety_descriptions" class="uri">https://freshops.com/hops/variety_descriptions</a><br />- <a href="http://www.bear-flavored.com/2011/12/bear-flavoreds-ultimate-guide-to-hop.html" class="uri">http://www.bear-flavored.com/2011/12/bear-flavoreds-ultimate-guide-to-hop.html</a><br />- <a href="http://www.homebrewstuff.com/hop-profiles" class="uri">http://www.homebrewstuff.com/hop-profiles</a><br />- <a href="http://beersmith.com/hop-list/" class="uri">http://beersmith.com/hop-list/</a></p>
 <p>For each hop variety, I tried to obtain the following information:<br />- Name<br />- Type (bittering, finishing or dual-purpose)<br />- Country of origin<br />- Alpha-acid content<br />- Beta-acid content<br />- Types of beer where hop is used<br />- Possible substitutes.</p>
 <p>Not all data was available for each variety. Also, in particular, reported alpha-acid content sometimes differed between sources - a content of 9-12% reported by one source could be reported as 10-15% in another. Hence, alpha-acid data should be treated in an approximate and relative way (i.e. a hop with reported alpha 9-12% is almost certain to have higher alpha than a hop with reported alpha 3-3.5%; on the other hand, it’s inconclusive whether it really has a lower alpha than a 10-15% hop).</p>
@@ -83,8 +84,8 @@ img {
 <p>For example:<br />Hallertau can be substituted <em>by</em> Saaz, Hersbrucker or Tettnang</p>
 <p>so the following edges were created:<br />Saaz –&gt; Hallertau (Saaz can substitute <em>for</em> Hallertau)<br />Hersbrucker –&gt; Hallertau<br />Tettnang –&gt; Hallertau</p>
 </div>
-<div id="initial-data-exploration-and-visualisation" class="section level6">
-<h6>Initial Data Exploration and Visualisation</h6>
+<div id="initial-data-exploration-and-visualisation" class="section level5">
+<h5><strong>Initial Data Exploration and Visualisation</strong></h5>
 <p>I chose R with the igraph package as my analysis tool.</p>
 <pre class="r"><code>library(igraph)</code></pre>
 <pre><code>## 
@@ -126,8 +127,8 @@ plot.igraph(hopg, layout=layout.fruchterman.reingold(graph=hopg, area=200^2), ve
 <p>These visualisations already tell some history of hop variety differentiation. For example, traditional UK hops group together. German noble hops also group together (those are the ones like Hallertau or Saaz). German high-alpha hops also group together. And a lot of the ungrouped varieties are high-alpha (which means they are new) or from Eastern Europe (which means that the American brewers would have a more limited access to them).</p>
 <p>Nevertheless, since this is an SNA Peer Assessment project, and it requires me to treat the network quantitatively - let’s start, seriously, from the quantitative metrics. From this point on, I’ll treat the graph as undirected:</p>
 </div>
-<div id="quantitative-network-analysis" class="section level6">
-<h6>Quantitative Network Analysis</h6>
+<div id="quantitative-network-analysis" class="section level5">
+<h5><strong>Quantitative Network Analysis</strong></h5>
 <p><strong>1. Network summary.</strong></p>
 <pre class="r"><code>summary(as.undirected(hopg))</code></pre>
 <pre><code>## IGRAPH UN-- 141 235 -- 
@@ -331,15 +332,14 @@ assortativity(as.undirected(hopg), hops_vert$cgroup)</code></pre>
 <pre><code>## [1] 0.5373829</code></pre>
 <p>Apparently, the feature that guarantees the highest assortativity is the alpha-acid content. This makes sense - it’s the alpha-acid content that determines the role of the hop in the beer. (For all that matters, I ignored the beta-acid content throughout this work because it’s less variable - and less important - than the alpha-acid content.)</p>
 </div>
-<div id="limitations-of-the-data-and-future-direction" class="section level6">
-<h6>Limitations of the Data and Future Direction</h6>
+<div id="limitations-of-the-data-and-future-direction" class="section level5">
+<h5><strong>Limitations of the Data and Future Direction</strong></h5>
 <p>The data I used, as mentioned in the Data Acquisition part, was far from perfect. Incomplete, combined from several subjective sources, with alpha-acid content data that was reported differently between sources. It also didn’t yield a lot of novel insight. That’s all right, as far as I’m concerned. It wasn’t supposed to. It was supposed to help me organise information I was not acquainted with. Though I think it might be entertaining to ask a professional brewer their opinion on whether it would be possible to substitute hops from the same communities that are not listed as direct substitutes. :-)</p>
 <p>More importantly, the data did not take into consideration <em>verbal</em> descriptions of hop varieties. These are important for the finishing/aroma hops. For example, the Nelson Sauvin variety is described in the Bear Flavored blog as “White wine, grapefruit, tangy berries. Dank and intensely fruity. Extremely unique” while Galaxy is “Tropical passionfruit, citrus hints of peach, mango.” Similarity between aroma hops should include similarity between the descriptions of their aromas, and, I think, it might be interesting to look into that.</p>
 </div>
-<div id="final-words" class="section level6">
-<h6>Final Words</h6>
+<div id="final-words" class="section level5">
+<h5><strong>Final Words</strong></h5>
 <p>Well, that was fun! I hope that you are not a teetotaller, a Muslim, or a beer brewer, and so you also got something from this project. If you’d like to know more about beers and how to pair them with food, <a href="http://www.splendidtable.org/story/the-7-flavor-categories-of-beer-what-they-are-how-to-pair-them">this</a> is a great link. Hops are only part of the picture, after all - there are also different malts. <em>Salut!</em></p>
-</div>
 </div>
 </div>
 
